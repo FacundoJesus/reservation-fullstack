@@ -1,0 +1,19 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  padding: 2rem 1.25rem 3rem;
+  background: radial-gradient(circle at top left, rgba(31, 115, 255, 0.22), transparent 30%),
+    linear-gradient(180deg, #0f325b 0%, #102d57 42%, #112c53 100%);
+  color: #111827;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+:host ::ng-deep body {
+  margin: 0;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}

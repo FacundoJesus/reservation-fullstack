@@ -1,0 +1,50 @@
+<section class="reservation-create" aria-labelledby="create-reservation-title">
+  <h2 id="create-reservation-title">Crear reserva</h2>
+
+  @if (saveError()) {
+    <div class="toast toast--error" role="alert" aria-live="assertive">
+      {{ saveError() }}
+    </div>
+  }
+
+  <form [formGroup]="form" (ngSubmit)="submit()" novalidate>
+    <label for="nombreCliente">Nombre del cliente</label>
+    <input id="nombreCliente" type="text" formControlName="nombreCliente" autocomplete="name" />
+    @if (form.controls.nombreCliente.invalid && form.controls.nombreCliente.touched) {
+      <p class="field-error">
+        El nombre del cliente es obligatorio.
+      </p>
+    }
+
+    <label for="fecha">Fecha</label>
+    <input id="fecha" type="date" formControlName="fecha" />
+    @if (form.controls.fecha.invalid && form.controls.fecha.touched) {
+      <p class="field-error">
+        La fecha es obligatoria.
+      </p>
+    }
+
+    <label for="hora">Hora</label>
+    <input id="hora" type="time" formControlName="hora" />
+    @if (form.controls.hora.invalid && form.controls.hora.touched) {
+      <p class="field-error">
+        La hora es obligatoria.
+      </p>
+    }
+
+    <label for="servicio">Servicio</label>
+    <select id="servicio" formControlName="servicio">
+      <option value="" disabled selected>Selecciona un servicio</option>
+      @for (option of serviceOptions; track $index) {
+        <option [value]="option">{{ option }}</option>
+      }
+    </select>
+    @if (form.controls.servicio.invalid && form.controls.servicio.touched) {
+      <p class="field-error">
+        El servicio es obligatorio.
+      </p>
+    }
+
+    <button type="submit" [disabled]="form.invalid || isSubmitting()">Guardar reserva</button>
+  </form>
+</section>

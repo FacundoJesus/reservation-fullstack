@@ -1,0 +1,145 @@
+:host {
+  display: block;
+  margin: 0 auto;
+}
+
+.reservation-page {
+  padding: 2rem;
+  max-width: 1100px;
+  margin: 0 auto 2rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 1.25rem;
+  box-shadow: 0 32px 80px rgba(13, 42, 82, 0.12);
+}
+
+.reservation-page h1 {
+  margin-bottom: 0.5rem;
+  font-size: 2.2rem;
+  letter-spacing: -0.04em;
+  color: #102d57;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.page-header h1 {
+  margin: 0;
+}
+
+.create-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 170px;
+  padding: 0.95rem 1.2rem;
+  border-radius: 1rem;
+  border: none;
+  background: linear-gradient(135deg, #1f73ff 0%, #00b0ff 100%);
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  box-shadow: 0 18px 34px rgba(31, 115, 255, 0.24);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.create-button:hover,
+.create-button:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 24px 40px rgba(31, 115, 255, 0.32);
+  filter: brightness(1.03);
+}
+
+.summary {
+  margin-bottom: 1.5rem;
+  color: #5f6d7a;
+}
+
+.status {
+  margin-bottom: 1rem;
+  color: #33475b;
+}
+
+.status--error {
+  color: #c62828;
+}
+
+.reservation-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  min-width: 760px;
+}
+
+.reservation-table th,
+.reservation-table td {
+  padding: 1rem 1.1rem;
+  text-align: left;
+}
+
+.reservation-table thead {
+  border-bottom: 2px solid rgba(31, 64, 106, 0.12);
+}
+
+.reservation-table th {
+  background: linear-gradient(90deg, #1f73ff 0%, #3d5bff 100%);
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-size: 0.95rem;
+}
+
+.reservation-table tbody tr {
+  border-bottom: 1px solid rgba(15, 34, 63, 0.08);
+}
+
+.reservation-table tbody tr:nth-child(even) {
+  background: #f9fbff;
+}
+
+.reservation-table td {
+  color: #34445a;
+  font-size: 0.98rem;
+}
+
+.cancel-button {
+  padding: 0.6rem 0.95rem;
+  background: #ef5350;
+  color: #fff;
+  border: none;
+  border-radius: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.cancel-button:hover,
+.cancel-button:focus-visible {
+  background: #d32f2f;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 900px) {
+  .reservation-page {
+    padding: 1.5rem;
+  }
+
+  .reservation-table {
+    min-width: 0;
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+  }
+
+  .reservation-table th,
+  .reservation-table td {
+    padding: 0.85rem 0.9rem;
+  }
+}

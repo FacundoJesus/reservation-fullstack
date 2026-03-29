@@ -1,0 +1,103 @@
+:host {
+  display: block;
+  max-width: 740px;
+  margin: 0 auto 2rem;
+}
+
+.reservation-create {
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: 1rem;
+  box-shadow: 0 28px 68px rgba(15, 44, 82, 0.14);
+  backdrop-filter: blur(14px);
+}
+
+.reservation-create h2 {
+  margin-bottom: 1.25rem;
+  font-size: 2rem;
+  letter-spacing: -0.03em;
+  color: #102d57;
+}
+
+.reservation-create label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  color: #33475b;
+}
+
+.reservation-create input,
+.reservation-create select {
+  width: 100%;
+  padding: 0.95rem 1rem;
+  border: 1px solid #ced7e0;
+  border-radius: 0.75rem;
+  background: #f9fbfd;
+  color: #1f2a3a;
+  font: 1rem Inter, system-ui, sans-serif;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.reservation-create input:focus,
+.reservation-create select:focus {
+  outline: none;
+  border-color: #2176ff;
+  box-shadow: 0 0 0 4px rgba(33, 118, 255, 0.14);
+}
+
+.reservation-create button {
+  margin-top: 1.5rem;
+  width: 100%;
+  padding: 1rem 1.15rem;
+  color: #fff;
+  background: linear-gradient(135deg, #1f73ff, #3d5bff);
+  border: none;
+  border-radius: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  box-shadow: 0 18px 30px rgba(31, 115, 255, 0.24);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.reservation-create button:hover:not(:disabled),
+.reservation-create button:focus-visible:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 22px 36px rgba(31, 115, 255, 0.28);
+}
+
+.reservation-create button:disabled {
+  background: #9bb6ff;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.field-error {
+  margin-top: 0.4rem;
+  color: #d32f2f;
+  font-size: 0.95rem;
+}
+
+.toast {
+  padding: 1rem 1.1rem;
+  margin-bottom: 1.25rem;
+  border-radius: 0.9rem;
+  font-weight: 600;
+}
+
+.toast--error {
+  background: rgba(255, 229, 230, 0.95);
+  color: #b00020;
+  border: 1px solid rgba(224, 115, 118, 0.45);
+}
+
+@media (max-width: 720px) {
+  .reservation-create {
+    padding: 1.5rem;
+  }
+
+  .reservation-create h2 {
+    font-size: 1.75rem;
+  }
+}

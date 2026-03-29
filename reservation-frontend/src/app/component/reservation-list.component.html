@@ -1,0 +1,46 @@
+<section class="reservation-page">
+  <div class="page-header">
+    <div>
+      <h1>Reservas</h1>
+      <p class="summary">Total de reservas: {{ totalReservations() }}</p>
+    </div>
+
+    <a class="create-button" routerLink="/reservas/nuevo">Nueva reserva</a>
+  </div>
+
+  <ng-container *ngIf="loading(); else content">
+    <p class="status">Cargando reservas...</p>
+  </ng-container>
+
+  <ng-template #content>
+    <p *ngIf="error()" class="status status--error">{{ error() }}</p>
+    <p *ngIf="!error() && reservations().length === 0" class="status">No hay reservas disponibles.</p>
+
+    <table *ngIf="reservations().length > 0" class="reservation-table" aria-label="Lista de reservas">
+      <thead>
+        <tr>
+          <th>Cliente</th>
+          <th>Fecha</th>
+          <th>Hora</th>
+          <th>Servicio</th>
+          <th>Estado</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let reservation of reservations(); trackBy: trackByReservation">
+          <td>{{ reservation.customerName }}</td>
+          <td>{{ reservation.date }}</td>
+          <td>{{ reservation.time }}</td>
+          <td>{{ reservation.service }}</td>
+          <td>{{ reservation.status }}</td>
+          <td>
+            <button type="button" class="cancel-button" (click)="cancelReservation(reservation.id)">
+              Cancelar
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </ng-template>
+</section>
