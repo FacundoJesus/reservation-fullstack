@@ -1,4 +1,4 @@
-package com.devsenior.cdiaz.reservation.exception;
+package com.devsenior.fcitera.reservation.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

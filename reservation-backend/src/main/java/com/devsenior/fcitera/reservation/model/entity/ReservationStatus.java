@@ -1,4 +1,4 @@
-package com.devsenior.cdiaz.reservation.model.entity;
+package com.devsenior.fcitera.reservation.model.entity;
 
 public enum ReservationStatus {
     ACTIVE, CANCELED;

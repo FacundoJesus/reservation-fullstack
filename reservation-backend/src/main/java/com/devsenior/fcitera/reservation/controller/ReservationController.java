@@ -1,4 +1,4 @@
-package com.devsenior.cdiaz.reservation.controller;
+package com.devsenior.fcitera.reservation.controller;
 
 import java.util.List;
 
@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.devsenior.cdiaz.reservation.model.entity.Reservation;
-import com.devsenior.cdiaz.reservation.service.ReservationService;
+import com.devsenior.fcitera.reservation.model.entity.Reservation;
+import com.devsenior.fcitera.reservation.service.ReservationService;
 
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController

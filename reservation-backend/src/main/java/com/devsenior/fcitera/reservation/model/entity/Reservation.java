@@ -1,4 +1,4 @@
-package com.devsenior.cdiaz.reservation.model.entity;
+package com.devsenior.fcitera.reservation.model.entity;
 
 import java.time.LocalDate;
 import java.time.LocalTime;

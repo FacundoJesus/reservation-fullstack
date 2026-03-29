@@ -1,4 +1,4 @@
-package com.devsenior.cdiaz.reservation;
+package com.devsenior.fcitera.reservation;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

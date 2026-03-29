@@ -1,4 +1,4 @@
-package com.devsenior.cdiaz.reservation.exception;
+package com.devsenior.fcitera.reservation.exception;
 
 public class BusinessRuleException extends RuntimeException {
 

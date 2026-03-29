@@ -1,4 +1,4 @@
-package com.devsenior.cdiaz.reservation.service;
+package com.devsenior.fcitera.reservation.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,10 +6,10 @@ import java.util.Optional;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.devsenior.cdiaz.reservation.exception.BusinessRuleException;
-import com.devsenior.cdiaz.reservation.model.entity.Reservation;
-import com.devsenior.cdiaz.reservation.model.entity.ReservationStatus;
-import com.devsenior.cdiaz.reservation.repository.ReservationRepository;
+import com.devsenior.fcitera.reservation.exception.BusinessRuleException;
+import com.devsenior.fcitera.reservation.model.entity.Reservation;
+import com.devsenior.fcitera.reservation.model.entity.ReservationStatus;
+import com.devsenior.fcitera.reservation.repository.ReservationRepository;
 
 @Service
 public class ReservationService {
